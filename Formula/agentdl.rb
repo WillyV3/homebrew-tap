@@ -8,7 +8,7 @@ class Agentdl < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-o", bin/"agentdl", "*.go"
+    system "go", "build", "-o", bin/"agentdl", "."
   end
 
   test do
