@@ -1,8 +1,8 @@
 class Agentdl < Formula
   desc "TUI for finding and downloading Claude agent configurations from GitHub"
   homepage "https://github.com/williavs/AGENTDL"
-  url "https://github.com/williavs/agent-search/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "3f7331ea27b42697f0c42cfd62691880004042bb61343dff25eabcbe1b9f57eb"
+  url "https://github.com/williavs/AGENTDL/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "a6d6b2838277a5c8ba56683b436f88a267d15b8b642345f4e25e434a58f36e48"
   license "MIT"
 
   depends_on "go" => :build
