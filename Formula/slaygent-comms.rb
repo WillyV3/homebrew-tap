@@ -6,23 +6,19 @@ class SlaygentComms < Formula
   license "MIT"
 
   depends_on "go" => :build
-  depends_on "gcc" => :build  # Required for CGO/sqlite3
   depends_on "tmux"
   depends_on "fd"
 
   def install
-    # Set CGO environment for sqlite3 compilation
-    ENV["CGO_ENABLED"] = "1"
-
     # Build TUI manager
     cd "app/tui" do
-      system "go", "build", "-v", "-o", "bin/slaygent-manager"
+      system "go", "build", "-o", "bin/slaygent-manager"
       bin.install "bin/slaygent-manager"
     end
 
     # Build messenger
     cd "app/messenger" do
-      system "go", "build", "-v", "-o", "bin/msg"
+      system "go", "build", "-o", "bin/msg"
       bin.install "bin/msg"
     end
 
