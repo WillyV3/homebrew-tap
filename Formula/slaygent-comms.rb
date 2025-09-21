@@ -14,9 +14,6 @@ class SlaygentComms < Formula
     # Set CGO environment for sqlite3 compilation
     ENV["CGO_ENABLED"] = "1"
 
-    # Pre-install sqlite3 to reduce build time
-    system "go", "install", "github.com/mattn/go-sqlite3@latest"
-
     # Build TUI manager
     cd "app/tui" do
       system "go", "build", "-v", "-o", "bin/slaygent-manager"
