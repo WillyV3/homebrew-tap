@@ -1,8 +1,8 @@
 class SlaygentComms < Formula
   desc "Inter-agent communication system for AI coding assistants in tmux panes"
   homepage "https://github.com/WillyV3/slaygent-comms"
-  url "https://github.com/WillyV3/slaygent-comms/archive/v1.0.1.tar.gz"
-  sha256 "b4899ad5a1537bcf03cb847f793130e4191730e19fd2e5d3a85f13558fd20469"
+  url "https://github.com/WillyV3/slaygent-comms/archive/v1.0.2.tar.gz"
+  sha256 "de95cf1f2f9e2560b36f27dfe2e8a3d7f2e8aa190f7ccd5aaef51171d78d7b75"
   license "MIT"
 
   depends_on "go" => :build
