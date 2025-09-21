@@ -22,15 +22,10 @@ class SlaygentComms < Formula
       bin.install "bin/msg"
     end
 
-    # Create shell aliases in completion scripts
-    (bash_completion/"slaygent").write <<~EOS
-      alias slay='#{bin}/slaygent-manager'
-      alias msg='#{bin}/msg'
-    EOS
-
-    (zsh_completion/"_slaygent").write <<~EOS
-      alias slay='#{bin}/slaygent-manager'
-      alias msg='#{bin}/msg'
+    # Create wrapper script for 'slay' command
+    (bin/"slay").write <<~EOS
+      #!/bin/bash
+      exec "#{bin}/slaygent-manager" "$@"
     EOS
 
     # Install sync scripts
@@ -59,18 +54,19 @@ class SlaygentComms < Formula
       🚀 Slaygent Communication Suite installed successfully!
 
       Commands:
-        slaygent-manager  - Launch TUI manager
+        slay              - Launch TUI manager
         msg <agent> "..."  - Send message to agent
 
       Quick Start:
         1. Start tmux: tmux new
-        2. Launch TUI: slaygent-manager
-        3. Register agents with 'a' key
+        2. Launch TUI: slay
+        3. Register agents with 'r' key
         4. Send messages: msg agent-name "Hello!"
 
-      For shell aliases, add to your shell config:
-        alias slay='slaygent-manager'
-        alias msg='msg'
+      Key Features:
+        - Press 's' in TUI for sync functionality
+        - Press '?' for comprehensive help system
+        - Inter-agent messaging via tmux panes
 
       Documentation: brew --prefix slaygent-comms/share/doc/slaygent-comms/
     EOS
