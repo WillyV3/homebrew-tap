@@ -2,7 +2,7 @@ class SlaygentComms < Formula
   desc "Inter-agent communication system for AI coding assistants in tmux panes"
   homepage "https://github.com/WillyV3/slaygent-comms"
   url "https://github.com/WillyV3/slaygent-comms/archive/v1.0.2.tar.gz"
-  sha256 "a60309e42c6d3cf8a92591ff9dcbcbe3a2503657b9770eaf951bb9d24c9ec117"
+  sha256 "d68da1f153cde6802a44aec1526488c9f4e80560d00e23bb84a2db0ed0d756b9"
   license "MIT"
 
   depends_on "go" => :build
@@ -32,6 +32,10 @@ class SlaygentComms < Formula
       alias slay='#{bin}/slaygent-manager'
       alias msg='#{bin}/msg'
     EOS
+
+    # Install sync scripts
+    libexec.install "app/scripts/sync-claude.sh"
+    libexec.install "app/scripts/custom-sync-claude.sh"
 
     # Install documentation
     doc.install "CLAUDE.md"
