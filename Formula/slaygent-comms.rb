@@ -22,6 +22,12 @@ class SlaygentComms < Formula
       bin.install "bin/msg"
     end
 
+    # Build cross-machine messenger
+    cd "app/msg-ssh" do
+      system "go", "build", "-o", "bin/msg-ssh"
+      bin.install "bin/msg-ssh"
+    end
+
     # Create wrapper script for 'slay' command
     (bin/"slay").write <<~EOS
       #!/bin/bash
@@ -56,6 +62,7 @@ class SlaygentComms < Formula
       Commands:
         slay              - Launch TUI manager
         msg <agent> "..."  - Send message to agent
+        msg-ssh <agent> "..." - Cross-machine messaging
 
       Quick Start:
         1. Start tmux: tmux new
@@ -75,6 +82,7 @@ class SlaygentComms < Formula
   test do
     # Test that binaries are installed and executable
     assert_match "Usage:", shell_output("#{bin}/msg 2>&1", 1)
+    assert_match "Usage:", shell_output("#{bin}/msg-ssh 2>&1", 1)
 
     # Test TUI manager help (should exit with error without tmux)
     system "#{bin}/slaygent-manager", "--help"
