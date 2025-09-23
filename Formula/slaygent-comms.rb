@@ -34,9 +34,9 @@ class SlaygentComms < Formula
       exec "#{bin}/slaygent-manager" "$@"
     EOS
 
-    # Install sync scripts
-    libexec.install "app/scripts/sync-claude.sh"
-    libexec.install "app/scripts/custom-sync-claude.sh"
+    # Install sync scripts to stable location
+    (lib/"slaygent-comms").install "app/scripts/sync-claude.sh"
+    (lib/"slaygent-comms").install "app/scripts/custom-sync-claude.sh"
 
     # Install documentation
     doc.install "CLAUDE.md"
