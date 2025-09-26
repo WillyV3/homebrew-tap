@@ -1,4 +1,4 @@
-class NextjsTemplater < Formula
+class Nextui < Formula
   desc "TUI to scaffold Next.js projects with shadcn/ui components and authentication"
   homepage "https://github.com/WillyV3/nextjs-templater"
   url "https://github.com/WillyV3/nextjs-templater/archive/v0.0.1.tar.gz"
@@ -9,8 +9,8 @@ class NextjsTemplater < Formula
   depends_on "node"
 
   def install
-    system "go", "build", "-o", "nextjs-templater"
-    bin.install "nextjs-templater"
+    system "go", "build", "-o", "nextui"
+    bin.install "nextui"
 
     # Install shell script
     bin.install "create-nextjs-shadcn.sh"
@@ -20,6 +20,6 @@ class NextjsTemplater < Formula
   end
 
   test do
-    system "#{bin}/nextjs-templater", "--version"
+    system "#{bin}/nextui", "--version"
   end
 end
