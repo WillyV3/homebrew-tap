@@ -1,8 +1,8 @@
 class Nextui < Formula
   desc "TUI to scaffold Next.js projects with shadcn/ui components and authentication"
   homepage "https://github.com/WillyV3/nextjs-templater"
-  url "https://github.com/WillyV3/nextjs-templater/archive/v0.1.5.tar.gz"
-  sha256 "44acfc52847cf0af65c99e3776aee703007aef89343bb4c39e1ab5539bcc37bf"
+  url "https://github.com/WillyV3/nextjs-templater/archive/v0.1.13.tar.gz"
+  sha256 "0ceaa33a4d920f04112e932fc934dd8185cd137b8ec2a2f65dad81d1d229058a"
   license "MIT"
 
   depends_on "go" => :build
