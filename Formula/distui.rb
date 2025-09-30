@@ -3,7 +3,7 @@ class Distui < Formula
   homepage "https://github.com/willyv3/distui"
   version "v0.0.1"
   url "https://github.com/willyv3/distui/archive/refs/tags/v0.0.1.tar.gz"
-  sha256 "8e2cf7eba2544d75f0ddd19c0acad809e20d98950021a575be1c98033c03179f"
+  sha256 "7f2f6572011891f1551ed4fbf340d4d146ab10fb47faeccad31801b3db7242bf"
 
   depends_on "go" => :build
 
