@@ -5,21 +5,21 @@
 class Distui < Formula
   desc "distui"
   homepage "https://github.com/willyv3/distui"
-  version "0.0.42"
+  version "0.0.43"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/willyv3/distui/releases/download/v0.0.42/distui_0.0.42_darwin_amd64.tar.gz"
-      sha256 "c0a5ca3651cfd06f6a9d69ff5a40b2591f99eea162679710e1df00088c9f0af3"
+      url "https://github.com/willyv3/distui/releases/download/v0.0.43/distui_0.0.43_darwin_amd64.tar.gz"
+      sha256 "148c9a350d9a41e2239c5013cc1d75cf561dee8558b13a7cca9b0e855c852838"
 
       def install
         bin.install "distui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/willyv3/distui/releases/download/v0.0.42/distui_0.0.42_darwin_arm64.tar.gz"
-      sha256 "6a5bdb6efc46804be4a726fb07840cb1a871e292b0d1e02fc2e474932c2f88db"
+      url "https://github.com/willyv3/distui/releases/download/v0.0.43/distui_0.0.43_darwin_arm64.tar.gz"
+      sha256 "dbfc8f29bb0133ed62bc8c3ffafce8e78b12922a75980fd1695c0732273d1517"
 
       def install
         bin.install "distui"
@@ -29,15 +29,15 @@ class Distui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/willyv3/distui/releases/download/v0.0.42/distui_0.0.42_linux_amd64.tar.gz"
-      sha256 "39c608a5b245c4158750ea4a82d8c3e6329a946ccdb1b5d681537cf387e424ae"
+      url "https://github.com/willyv3/distui/releases/download/v0.0.43/distui_0.0.43_linux_amd64.tar.gz"
+      sha256 "44c56cb18fc0787ec9a2b04ea370987d1c85c43d8f0eb329bdd74db6b7abaeb8"
       def install
         bin.install "distui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/willyv3/distui/releases/download/v0.0.42/distui_0.0.42_linux_arm64.tar.gz"
-      sha256 "378787d7f05c28d5be753c96eab112c9c79b5ede20f5a66803f79d3d41a2ae69"
+      url "https://github.com/willyv3/distui/releases/download/v0.0.43/distui_0.0.43_linux_arm64.tar.gz"
+      sha256 "5506b0e129de7ed9021d47b7b62ed6d01acebdbcd670c4925f1dd3fa71cf5d01"
       def install
         bin.install "distui"
       end
