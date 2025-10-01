@@ -5,21 +5,21 @@
 class GithubCom/willyv3/nextjsTemplater < Formula
   desc "github.com/WillyV3/nextjs-templater"
   homepage "https://github.com/WillyV3/nextjs-templater"
-  version "0.1.46"
+  version "0.1.47"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/WillyV3/nextjs-templater/releases/download/v0.1.46/nextjs-templater_0.1.46_darwin_amd64.tar.gz"
-      sha256 "030706827eea0941929b8e158f87c5344d9609eabbab025162e8dd5460a821c5"
+      url "https://github.com/WillyV3/nextjs-templater/releases/download/v0.1.47/nextjs-templater_0.1.47_darwin_amd64.tar.gz"
+      sha256 "8f3063550e600a576e1583f99480c72257db652b690c7524d955b8395a7d6c90"
 
       def install
         bin.install "nextjs-templater"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/WillyV3/nextjs-templater/releases/download/v0.1.46/nextjs-templater_0.1.46_darwin_arm64.tar.gz"
-      sha256 "071ae2093a728db6b267c866df1d35b1198e91656f06ff2a09e937a9850851c7"
+      url "https://github.com/WillyV3/nextjs-templater/releases/download/v0.1.47/nextjs-templater_0.1.47_darwin_arm64.tar.gz"
+      sha256 "5d5a67305430e88427103753816260693d406b19105dd05c9ee468211b1bae95"
 
       def install
         bin.install "nextjs-templater"
@@ -29,15 +29,15 @@ class GithubCom/willyv3/nextjsTemplater < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/nextjs-templater/releases/download/v0.1.46/nextjs-templater_0.1.46_linux_amd64.tar.gz"
-      sha256 "4f793b47b3c84d0f18876b9f7ee8f5bf1d3a61a2630757eec832c32fc1bc8f62"
+      url "https://github.com/WillyV3/nextjs-templater/releases/download/v0.1.47/nextjs-templater_0.1.47_linux_amd64.tar.gz"
+      sha256 "9fc0cf35ceae2e8928ec0e788e49c65428a852d703b58fa714728c3150e70791"
       def install
         bin.install "nextjs-templater"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/nextjs-templater/releases/download/v0.1.46/nextjs-templater_0.1.46_linux_arm64.tar.gz"
-      sha256 "54d769bacb383c151f141298e4a23abe5f62c2833c3a34c118727091eb104386"
+      url "https://github.com/WillyV3/nextjs-templater/releases/download/v0.1.47/nextjs-templater_0.1.47_linux_arm64.tar.gz"
+      sha256 "4fe058074f6effd5aafa82e402e9d38f9fbfaf9e61865f392aec2bfdfed442be"
       def install
         bin.install "nextjs-templater"
       end
