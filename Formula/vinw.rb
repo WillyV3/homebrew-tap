@@ -1,8 +1,8 @@
 class Vinw < Formula
   desc "Interactive file tree viewer with real-time git tracking and syntax highlighting"
   homepage "https://github.com/willyv3/vinw"
-  url "https://github.com/willyv3/vinw/archive/v1.2.0.tar.gz"
-  sha256 "3b37b0c34e395800156ce525634fbc589ed9dd54811321d6a76821070867c1fa"
+  url "https://github.com/willyv3/vinw/archive/v1.3.0.tar.gz"
+  sha256 "ac94df4c8551f4d90e7d81513bd51f7df29d94259b4c507c8bc6d6f7b80c14fe"
   license "MIT"
 
   depends_on "go" => :build
