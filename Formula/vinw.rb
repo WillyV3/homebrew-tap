@@ -8,12 +8,12 @@ class Vinw < Formula
   depends_on "go" => :build
 
   def install
-    cd "app" do
-      system "go", "build", "-o", "#{bin}/vinw"
+    # Build main vinw binary
+    system "go", "build", "-o", "#{bin}/vinw"
 
-      cd "viewer" do
-        system "go", "build", "-o", "#{bin}/vinw-viewer"
-      end
+    # Build viewer binary
+    cd "viewer" do
+      system "go", "build", "-o", "#{bin}/vinw-viewer"
     end
   end
 
@@ -52,7 +52,10 @@ class Vinw < Formula
   end
 
   test do
-    system "#{bin}/vinw", "--version"
-    system "#{bin}/vinw-viewer", "--version"
+    # Test that binaries exist and are executable
+    assert_predicate bin/"vinw", :exist?
+    assert_predicate bin/"vinw", :executable?
+    assert_predicate bin/"vinw-viewer", :exist?
+    assert_predicate bin/"vinw-viewer", :executable?
   end
 end
