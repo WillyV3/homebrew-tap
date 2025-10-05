@@ -1,8 +1,8 @@
 class VinwWorkspace < Formula
   desc "Interactive TUI for launching tmux workspaces with vinw, vinw-viewer, and development tools"
   homepage "https://github.com/willyv3/vinw-workspace"
-  url "https://github.com/willyv3/vinw-workspace/archive/v0.0.1.tar.gz"
-  sha256 "f603b3d8a0ba0b40f964f666f468b875e2c40648742fc351ab2518c0dc42bdaf"
+  url "https://github.com/willyv3/vinw-workspace/archive/v0.0.2.tar.gz"
+  sha256 "320d8f47ab498ae204537746e02257daa90cdc93edcd55b15e6c54a09d7f200b"
   license "MIT"
 
   depends_on "go" => :build
