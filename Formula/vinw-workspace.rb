@@ -5,21 +5,21 @@
 class VinwWorkspace < Formula
   desc "vinw-workspace"
   homepage "https://github.com/WillyV3/vinw-workspace"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/WillyV3/vinw-workspace/releases/download/v0.1.1/vinw-workspace_0.1.1_darwin_amd64.tar.gz"
-      sha256 "b30647b8f0eb3e130de8fb183862330a4f0e95d58fe3e3002aa7cd6e191352f2"
+      url "https://github.com/WillyV3/vinw-workspace/releases/download/v0.1.2/vinw-workspace_0.1.2_darwin_amd64.tar.gz"
+      sha256 "ede4f90f1d5f0b2a3a3729694041740aa6480520de6e9516cbe3286b8bd557c9"
 
       def install
         bin.install "vinw-workspace"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/WillyV3/vinw-workspace/releases/download/v0.1.1/vinw-workspace_0.1.1_darwin_arm64.tar.gz"
-      sha256 "77db609a5c9e9bd1102b79f5a9c0d647b56a37b7416c5729c042e0b181045051"
+      url "https://github.com/WillyV3/vinw-workspace/releases/download/v0.1.2/vinw-workspace_0.1.2_darwin_arm64.tar.gz"
+      sha256 "6caf7fbacdc141ac0ddeac9775c534aca84a99b9902ca2f88ebd96a19daddfd3"
 
       def install
         bin.install "vinw-workspace"
@@ -29,15 +29,15 @@ class VinwWorkspace < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/vinw-workspace/releases/download/v0.1.1/vinw-workspace_0.1.1_linux_amd64.tar.gz"
-      sha256 "7c947000f71fc566ad40dcc9a0a4c126cd97ba66de8b1ffdd5a884979c5e35d9"
+      url "https://github.com/WillyV3/vinw-workspace/releases/download/v0.1.2/vinw-workspace_0.1.2_linux_amd64.tar.gz"
+      sha256 "8d2fab5f07829bcf31133fa386d445068f3ec82f0810676c7bc0fec24e22c7a0"
       def install
         bin.install "vinw-workspace"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/vinw-workspace/releases/download/v0.1.1/vinw-workspace_0.1.1_linux_arm64.tar.gz"
-      sha256 "64883bfa21ace3dfd0eeccfc56414f66d738584ea0289e2d13b759106f5ba63d"
+      url "https://github.com/WillyV3/vinw-workspace/releases/download/v0.1.2/vinw-workspace_0.1.2_linux_arm64.tar.gz"
+      sha256 "7bd48ae3199037cbb267531fd4dfe106494a4dc34a27538874d2decb688693f9"
       def install
         bin.install "vinw-workspace"
       end
