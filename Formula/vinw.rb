@@ -37,7 +37,9 @@ class Vinw < Formula
           q           - Quit
 
         vinw-viewer:
+          e           - Edit file (auto-detects editor)
           ↑/↓         - Scroll content
+          m           - Toggle mouse mode
           r           - Manual refresh
           q           - Quit
     EOS
