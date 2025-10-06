@@ -1,11 +1,12 @@
 class Vinw < Formula
   desc "Interactive file tree viewer with real-time git tracking and syntax highlighting"
   homepage "https://github.com/willyv3/vinw"
-  url "https://github.com/willyv3/vinw/archive/v1.3.3.tar.gz"
-  sha256 "91fe22a915e2edb6de5b31f01292e127912694718263920917c11d955e82ad79"
+  url "https://github.com/willyv3/vinw/archive/v1.3.4.tar.gz"
+  sha256 "76f4a88f722ee87895b42bc9f69d7b23cb83d0509f6509298b8341e8f1539223"
   license "MIT"
 
   depends_on "go" => :build
+  depends_on "skate"
 
   def install
     # Build main vinw binary
@@ -14,14 +15,6 @@ class Vinw < Formula
     # Build viewer binary
     cd "viewer" do
       system "go", "build", "-o", "#{bin}/vinw-viewer"
-    end
-  end
-
-  def post_install
-    # Install Skate if not already installed
-    unless which("skate")
-      ohai "Installing Skate (required for IPC between vinw and vinw-viewer)..."
-      system "go", "install", "github.com/charmbracelet/skate@latest"
     end
   end
 
@@ -34,8 +27,7 @@ class Vinw < Formula
         2. Start viewer in another:        vinw-viewer
 
       Requirements:
-        - Skate is required for IPC (will be installed if missing)
-        - Git for repository tracking
+        - Git for repository tracking (optional)
 
       Controls:
         vinw:
