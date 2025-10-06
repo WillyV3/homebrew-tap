@@ -11,7 +11,7 @@ class Distui < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/willyv3/distui/releases/download/v1.0.8/distui_1.0.8_darwin_amd64.tar.gz"
-      sha256 "e918ebedf5a7189b5537490d871f8eb08d6a09ddca3812cfb4e3256346842e6f"
+      sha256 "3767f769d92059415ab0536fd5edfe1218e179b94125317271b02beb94b37400"
 
       def install
         bin.install "distui"
@@ -19,7 +19,7 @@ class Distui < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/willyv3/distui/releases/download/v1.0.8/distui_1.0.8_darwin_arm64.tar.gz"
-      sha256 "6e34dbe751072044ef4e2e9f256e68c4849f61b2fd3f1b04a437dc15af54ee46"
+      sha256 "1a526f8454ef5cfb21de2c806dbb3f98c9dc5dfbde147020532f103aa52f01e2"
 
       def install
         bin.install "distui"
@@ -30,14 +30,14 @@ class Distui < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/willyv3/distui/releases/download/v1.0.8/distui_1.0.8_linux_amd64.tar.gz"
-      sha256 "8dcefaf769a8ae40ccaac07257496178b4c40d39c2ae7c3b73901c0f3a162c9b"
+      sha256 "acafba8ba391d8f969126450580e1136cdcf1bc6f990fd0ed07a8137c730596b"
       def install
         bin.install "distui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/willyv3/distui/releases/download/v1.0.8/distui_1.0.8_linux_arm64.tar.gz"
-      sha256 "ee62dcb6e356564a54aac7ad51717ad2353579aa55192a12b99f06680a0faf1f"
+      sha256 "45b836b31020b8dd355a1c2d5234c31f0649189aadd9dfdcc884b168692313f9"
       def install
         bin.install "distui"
       end
