@@ -11,7 +11,7 @@ class GithubCom/willyv3/nextjsTemplater < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/WillyV3/nextjs-templater/releases/download/v0.2.1/nextjs-templater_0.2.1_darwin_amd64.tar.gz"
-      sha256 "74e9c4a33e62e8e2a7378ee99ce44ab987e68b9a1d6bbff55ee7072bc18d7078"
+      sha256 "b630b2fe2db727254b3e8a291ef9eb9ffa718bd0e6c36f13df3a49d81d030d67"
 
       def install
         bin.install "nextjs-templater"
@@ -19,7 +19,7 @@ class GithubCom/willyv3/nextjsTemplater < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/WillyV3/nextjs-templater/releases/download/v0.2.1/nextjs-templater_0.2.1_darwin_arm64.tar.gz"
-      sha256 "86f8b43fd56fa42006d3197cfda7a57d328da2366828a12d50de2b41e67339e9"
+      sha256 "fecc0edc06295552c1873abd2a3a617af4812d338cee0ba0640635036ec36119"
 
       def install
         bin.install "nextjs-templater"
@@ -30,14 +30,14 @@ class GithubCom/willyv3/nextjsTemplater < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/WillyV3/nextjs-templater/releases/download/v0.2.1/nextjs-templater_0.2.1_linux_amd64.tar.gz"
-      sha256 "65f9917706226fafeec3efbdbed1e42cb1226fcac2aa927b8ab77008e60a57be"
+      sha256 "5669b276c0ec6931551f8be47429f6735de273d928c994f141d6d4a309fb2ec7"
       def install
         bin.install "nextjs-templater"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/WillyV3/nextjs-templater/releases/download/v0.2.1/nextjs-templater_0.2.1_linux_arm64.tar.gz"
-      sha256 "374a790de569349fa4df61ba4ecf9acce6679cc42ce46c1aac608c5f329558e6"
+      sha256 "7f6fb92adf7bbab56a31dbd7de03fd9eb664357a01c6901c2fd622db3589c18d"
       def install
         bin.install "nextjs-templater"
       end
