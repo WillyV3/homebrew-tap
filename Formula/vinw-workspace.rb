@@ -10,16 +10,16 @@ class VinwWorkspace < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/WillyV3/vinw-workspace/releases/download/v0.2.0/vinw-workspace_0.2.0_darwin_amd64.tar.gz"
-      sha256 "5cd93a25ff3ca7b6e788978841aab13643a5c381836df8db202bd15b5d71e9ad"
+      url "https://github.com/willyv3/vinw-workspace/archive/v0.2.1.tar.gz"
+      sha256 "5d53f53b4a801a03bfd6abd5ebb8ab1f14fd1d165187f3bee43c000572799d72"
 
       def install
         bin.install "vinw-workspace"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/WillyV3/vinw-workspace/releases/download/v0.2.0/vinw-workspace_0.2.0_darwin_arm64.tar.gz"
-      sha256 "9c20e228aa186a57b7134ab8c9c3f241e251d2352491fdaf8b6e189c54648193"
+      url "https://github.com/willyv3/vinw-workspace/archive/v0.2.1.tar.gz"
+      sha256 "5d53f53b4a801a03bfd6abd5ebb8ab1f14fd1d165187f3bee43c000572799d72"
 
       def install
         bin.install "vinw-workspace"
@@ -29,15 +29,15 @@ class VinwWorkspace < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/vinw-workspace/releases/download/v0.2.0/vinw-workspace_0.2.0_linux_amd64.tar.gz"
-      sha256 "e121957041a7a707dfb2e86924bca60b1bcdb4411ee7f92e8c2d1187079f60da"
+      url "https://github.com/willyv3/vinw-workspace/archive/v0.2.1.tar.gz"
+      sha256 "5d53f53b4a801a03bfd6abd5ebb8ab1f14fd1d165187f3bee43c000572799d72"
       def install
         bin.install "vinw-workspace"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/vinw-workspace/releases/download/v0.2.0/vinw-workspace_0.2.0_linux_arm64.tar.gz"
-      sha256 "881b4cf052f5033d46154a2918f74889a0aee5f6a726cb7d6e03b23a73ea2c84"
+      url "https://github.com/willyv3/vinw-workspace/archive/v0.2.1.tar.gz"
+      sha256 "5d53f53b4a801a03bfd6abd5ebb8ab1f14fd1d165187f3bee43c000572799d72"
       def install
         bin.install "vinw-workspace"
       end
