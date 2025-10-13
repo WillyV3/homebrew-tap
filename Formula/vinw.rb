@@ -24,16 +24,28 @@ class Vinw < Formula
 
       To use vinw:
         1. Start vinw in one terminal:     vinw
-        2. Start viewer in another:        vinw-viewer
+        2. Start viewer in another:        vinw-viewer <session-id>
 
       Requirements:
         - Git for repository tracking (optional)
 
-      Controls:
+      Controls (Vim-style):
         vinw:
           j/k or ↑/↓  - Navigate files
-          Enter       - Select file for viewing
+          h/l or ←/→  - Collapse/expand directories
+          Enter/Space - Select file for viewing
+          u           - Toggle hidden files
           i           - Toggle gitignore filter
+          n           - Toggle full nesting
+          r           - Refresh git status (fast)
+          R           - Full refresh (slow)
+          a           - Create new file
+          A           - Create new directory
+          d           - Delete file/directory
+          c           - Copy path to clipboard
+          t/T         - Change theme
+          v           - Show viewer command
+          ?           - Help
           q           - Quit
 
         vinw-viewer:
@@ -42,6 +54,11 @@ class Vinw < Formula
           m           - Toggle mouse mode
           r           - Manual refresh
           q           - Quit
+
+      Performance:
+        - Auto-refresh runs every 60s (use 'r' for manual refresh)
+        - Untracked files show as "(new)" for speed
+        - Tree navigation is instant even in large repos
     EOS
   end
 
