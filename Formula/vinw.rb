@@ -51,6 +51,8 @@ class Vinw < Formula
         vinw-viewer:
           e           - Edit file (auto-detects editor)
           ↑/↓         - Scroll content
+          Ctrl+f/b    - Page down/up (vim-style)
+          Ctrl+d/u    - Half page down/up (vim-style)
           m           - Toggle mouse mode
           r           - Manual refresh
           q           - Quit
