@@ -1,8 +1,8 @@
 class Vinw < Formula
   desc "Interactive file tree viewer with real-time git tracking and syntax highlighting"
   homepage "https://github.com/willyv3/vinw"
-  url "https://github.com/willyv3/vinw/archive/vbaseline-before-optimization.4.0.tar.gz"
-  sha256 "e0abd8511fcb49263c5ac86624bfb9cf91f559d5c37274f562f181221b695e8b"
+  url "https://github.com/willyv3/vinw/archive/vbaseline-before-optimization.5.0.tar.gz"
+  sha256 "edfb0f9c10c31eea3e53dee60d477af7664f9c3ca23d6d98c9e2a58cb0c560ad"
   license "MIT"
 
   depends_on "go" => :build
@@ -71,12 +71,9 @@ class Vinw < Formula
         ░░█████    █████ ████ █████  ░░████░████
          ░░░░░    ░░░░░ ░░░░ ░░░░░    ░░░░ ░░░░
 
-      What's New in vbaseline-before-optimization.4.0:
-        • Fix critical viewer paste bug (subprocess conflicts)
-        • Add vim keybindings (h/l, ctrl+f/b/d/u)
-        • Optimize polling: 1s → 60s (60x reduction)
-        • Release notes now show in installation message
-
+      What's New in vbaseline-before-optimization.5.0:
+        - Remove Unicode bullet character, use plain dash in release n
+        - Use perl instead of sed for formula updates (handles Unicode
       Blog: breakshit.blog
       Website: willyv3.com
       @humanfrontierlabs
