@@ -68,6 +68,10 @@ class Vinw < Formula
        ░░███ ███   ░███  ░███ ░███  ░░███████████
         ░░█████    █████ ████ █████  ░░████░████
          ░░░░░    ░░░░░ ░░░░ ░░░░░    ░░░░ ░░░░
+
+      Blog: breakshit.blog
+      Website: willyv3.com
+      @humanfrontierlabs
     EOS
   end
 
