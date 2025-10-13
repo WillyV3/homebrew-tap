@@ -71,6 +71,12 @@ class Vinw < Formula
         ░░█████    █████ ████ █████  ░░████░████
          ░░░░░    ░░░░░ ░░░░ ░░░░░    ░░░░ ░░░░
 
+      What's New in vbaseline-before-optimization.4.0:
+        • Fix critical viewer paste bug (subprocess conflicts)
+        • Add vim keybindings (h/l, ctrl+f/b/d/u)
+        • Optimize polling: 1s → 60s (60x reduction)
+        • Release notes now show in installation message
+
       Blog: breakshit.blog
       Website: willyv3.com
       @humanfrontierlabs
