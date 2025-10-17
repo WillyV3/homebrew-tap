@@ -1,8 +1,8 @@
 class GummyAgent < Formula
   desc "Fast multi-agent orchestration using Claude Haiku with real-time TUI monitoring"
   homepage "https://github.com/WillyV3/gummy-agent"
-  url "https://github.com/WillyV3/gummy-agent/archive/v0.0.8.tar.gz"
-  sha256 "0a50ab0cc613af38749096a5d588328d0f4acf90b3f29c6e905affb6929baae2"
+  url "https://github.com/WillyV3/gummy-agent/archive/v0.0.9.tar.gz"
+  sha256 "40ac98d550d94e47508d9bec566666dc6ea182547759dba649f4589b8a9f9af2"
   license "MIT"
 
   depends_on "go" => :build
