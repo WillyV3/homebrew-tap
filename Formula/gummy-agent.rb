@@ -26,10 +26,10 @@ class GummyAgent < Formula
     logs_dir = "#{claude_home}/logs/gummy"
     comms_dir = "#{claude_home}/agent_comms/gummy"
 
-    # Create directories
-    system "mkdir", "-p", commands_dir
-    system "mkdir", "-p", logs_dir
-    system "mkdir", "-p", comms_dir
+    # Create directories using Ruby
+    FileUtils.mkdir_p(commands_dir)
+    FileUtils.mkdir_p(logs_dir)
+    FileUtils.mkdir_p(comms_dir)
 
     # Install slash commands to user's Claude config
     Dir["#{prefix}/commands/*.md"].each do |cmd_file|
@@ -38,8 +38,8 @@ class GummyAgent < Formula
 
       # Copy command file if it doesn't exist or update if different
       if !File.exist?(target) || File.read(cmd_file) != File.read(target)
-        system "cp", cmd_file, target
-        puts "  Installed command: /#{File.basename(cmd_name, '.md')}"
+        FileUtils.cp(cmd_file, target)
+        ohai "Installed command: /#{File.basename(cmd_name, '.md')}"
       end
     end
   end
