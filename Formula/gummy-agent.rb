@@ -1,8 +1,8 @@
 class GummyAgent < Formula
   desc "Fast multi-agent orchestration using Claude Haiku with real-time TUI monitoring"
   homepage "https://github.com/WillyV3/gummy-agent"
-  url "https://github.com/WillyV3/gummy-agent/archive/v0.0.5.tar.gz"
-  sha256 "5f71855c69b386928c9e4c5f51543831cf8ffc47612a9f8cddec5cec2a7f9315"
+  url "https://github.com/WillyV3/gummy-agent/archive/v0.0.6.tar.gz"
+  sha256 "e2c9906f68d826b4c69ce04d19237968fbe06768f44fbe26e7100874cb354f1a"
   license "MIT"
 
   depends_on "go" => :build
@@ -36,50 +36,25 @@ eeeee e   e eeeeeee eeeeeee e    e    eeeee eeeee eeee eeeee eeeee eeeee
 
                                                         @builtbywilly.com
 
-      gummy-agent has been installed!
+      gummy-agent installed!
 
-      Fast multi-agent orchestration using Claude Haiku 4.5
+      Fast multi-agent orchestration with Claude Haiku 4.5
 
-      SETUP REQUIRED:
-        Run this once to install Claude CLI commands:
-          gummy setup
+      Usage:
+        gummy plan "build auth system"    - Plan complex features
+        gummy task "refactor helpers"     - Quick single tasks
+        gummy execute [task-id]           - Run approved plan
+        gummy-watch [task-id]             - Monitor with TUI
 
-      Three Execution Modes:
+      Press 'c' in TUI to copy output to clipboard
 
-        1. Plan Mode (Complex Features):
-           gummy plan "Build authentication system with JWT"
-           - Creates detailed implementation plan
-           - Research and discovery phase
-           - Review plan before execution
+      Logs:    ~/.claude/logs/gummy/
+      Reports: ~/.claude/agent_comms/gummy/
 
-        2. Task Mode (Simple Changes):
-           gummy task "Refactor auth helper functions"
-           - Fast single-shot execution
-           - No planning phase
-           - Perfect for quick tasks
+      Docs: https://github.com/WillyV3/gummy-agent
 
-        3. Execute Mode (Run Approved Plan):
-           gummy execute [task-id]
-           - Implements approved plan
-           - Full execution with reports
-
-      Monitor in Real-Time:
-        gummy-watch [task-id]
-        - Live agent status and progress
-        - Full markdown rendering
-        - Press 'c' to copy final message
-        - Press 'q' to quit
-
-      Requirements:
-        - Claude CLI with API key configured
-        - Haiku model access
-
-      File Locations:
-        Logs:    ~/.claude/logs/gummy/
-        Reports: ~/.claude/agent_comms/gummy/
-
-      Documentation:
-        https://github.com/WillyV3/gummy-agent
+      SETUP: Run once to install Claude CLI commands
+        gummy setup
     EOS
   end
 
