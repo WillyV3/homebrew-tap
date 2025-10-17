@@ -24,23 +24,53 @@ class GummyAgent < Formula
 
   def caveats
     <<~EOS
-  ▄▀    ▄   █▀▄▀█ █▀▄▀█ ▀▄    ▄     ██     ▄▀  ▄███▄      ▄     ▄▄▄▄▀ ▄▄▄▄▄
-▄▀       █  █ █ █ █ █ █   █  █      █ █  ▄▀    █▀   ▀      █ ▀▀▀ █   █     ▀▄
-█ ▀▄  █   █ █ ▄ █ █ ▄ █    ▀█       █▄▄█ █ ▀▄  ██▄▄    ██   █    █ ▄  ▀▀▀▀▄
-█   █ █   █ █   █ █   █    █        █  █ █   █ █▄   ▄▀ █ █  █   █   ▀▄▄▄▄▀
- ███  █▄ ▄█    █     █   ▄▀            █  ███  ▀███▀   █  █ █  ▀
-       ▀▀▀    ▀     ▀                 █                █   ██
-                                     ▀
-                                                            @builtbywilly.com
 
-      Fast multi-agent orchestration with Claude Haiku
+  _   _  _     _ _ _  _/ _
+ (/(///)//)(/ (/(/(-/)/_)
+_/         /   _/
 
-      Quick Start:
-        gummy plan "your complex task description"
-        gummy task "simple task description"
+                    @builtbywilly.com
+
+      gummy-agent has been installed!
+
+      Fast multi-agent orchestration using Claude Haiku 4.5
+
+      Three Execution Modes:
+
+        1. Plan Mode (Complex Features):
+           gummy plan "Build authentication system with JWT"
+           - Creates detailed implementation plan
+           - Research and discovery phase
+           - Review plan before execution
+
+        2. Task Mode (Simple Changes):
+           gummy task "Refactor auth helper functions"
+           - Fast single-shot execution
+           - No planning phase
+           - Perfect for quick tasks
+
+        3. Execute Mode (Run Approved Plan):
+           gummy execute [task-id]
+           - Implements approved plan
+           - Full execution with reports
+
+      Monitor in Real-Time:
         gummy-watch [task-id]
+        - Live agent status and progress
+        - Full markdown rendering
+        - Press 'c' to copy final message
+        - Press 'q' to quit
 
-      Logs and reports stored in ~/.claude/
+      Requirements:
+        - Claude CLI with API key configured
+        - Haiku model access
+
+      File Locations:
+        Logs:    ~/.claude/logs/gummy/
+        Reports: ~/.claude/agent_comms/gummy/
+
+      Documentation:
+        https://github.com/WillyV3/gummy-agent
     EOS
   end
 
