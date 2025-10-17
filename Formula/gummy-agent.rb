@@ -1,8 +1,8 @@
 class GummyAgent < Formula
   desc "Fast multi-agent orchestration using Claude Haiku with real-time TUI monitoring"
   homepage "https://github.com/WillyV3/gummy-agent"
-  url "https://github.com/WillyV3/gummy-agent/archive/v0.0.2.tar.gz"
-  sha256 "1a00ac041003918d1a4da148f00b82a54500eb73282bf316e87dc3d2a2d0793e"
+  url "https://github.com/WillyV3/gummy-agent/archive/v0.0.5.tar.gz"
+  sha256 "5f71855c69b386928c9e4c5f51543831cf8ffc47612a9f8cddec5cec2a7f9315"
   license "MIT"
 
   depends_on "go" => :build
@@ -20,28 +20,9 @@ class GummyAgent < Formula
   end
 
   def post_install
-    # Create necessary directories
-    claude_home = File.expand_path("~/.claude")
-    commands_dir = "#{claude_home}/commands"
-    logs_dir = "#{claude_home}/logs/gummy"
-    comms_dir = "#{claude_home}/agent_comms/gummy"
-
-    # Create directories using Ruby
-    FileUtils.mkdir_p(commands_dir)
-    FileUtils.mkdir_p(logs_dir)
-    FileUtils.mkdir_p(comms_dir)
-
-    # Install slash commands to user's Claude config
-    Dir["#{prefix}/commands/*.md"].each do |cmd_file|
-      cmd_name = File.basename(cmd_file)
-      target = "#{commands_dir}/#{cmd_name}"
-
-      # Copy command file if it doesn't exist or update if different
-      if !File.exist?(target) || File.read(cmd_file) != File.read(target)
-        FileUtils.cp(cmd_file, target)
-        ohai "Installed command: /#{File.basename(cmd_name, '.md')}"
-      end
-    end
+    # Commands are installed to #{prefix}/commands
+    # Users will run the setup command to copy them
+    ohai "Run 'gummy setup' to install Claude CLI commands"
   end
 
   def caveats
@@ -58,6 +39,10 @@ eeeee e   e eeeeeee eeeeeee e    e    eeeee eeeee eeee eeeee eeeee eeeee
       gummy-agent has been installed!
 
       Fast multi-agent orchestration using Claude Haiku 4.5
+
+      SETUP REQUIRED:
+        Run this once to install Claude CLI commands:
+          gummy setup
 
       Three Execution Modes:
 
