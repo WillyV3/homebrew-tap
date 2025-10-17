@@ -1,8 +1,8 @@
 class GummyAgent < Formula
   desc "Fast multi-agent orchestration using Claude Haiku with real-time TUI monitoring"
   homepage "https://github.com/WillyV3/gummy-agent"
-  url "https://github.com/WillyV3/gummy-agent/archive/v0.0.7.tar.gz"
-  sha256 "cacc9f68fe0e03295f8350dcfc07c98b5d5842c3769bd9f4010c96c4e5353be7"
+  url "https://github.com/WillyV3/gummy-agent/archive/v0.0.8.tar.gz"
+  sha256 "0a50ab0cc613af38749096a5d588328d0f4acf90b3f29c6e905affb6929baae2"
   license "MIT"
 
   depends_on "go" => :build
@@ -53,8 +53,10 @@ eeeee e   e eeeeeee eeeeeee e    e    eeeee eeeee eeee eeeee eeeee eeeee
 
       Docs: https://github.com/WillyV3/gummy-agent
 
-      SETUP: Run once to install Claude Code commands
-        gummy setup
+      ┌────────────────────────────────────────────────────────────────┐
+      │  SETUP: Run once to install Claude Code commands              │
+      │    gummy setup                                                 │
+      └────────────────────────────────────────────────────────────────┘
     EOS
   end
 
