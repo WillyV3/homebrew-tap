@@ -14,12 +14,34 @@ class GummyAgent < Formula
     # Install binaries
     bin.install "gummy"
     bin.install "gummy-watch"
+
+    # Install slash commands for Claude CLI
+    (prefix/"commands").install Dir["commands/*.md"]
   end
 
   def post_install
     # Create necessary directories
-    (var/"claude/logs/gummy").mkpath
-    (var/"claude/agent_comms/gummy").mkpath
+    claude_home = File.expand_path("~/.claude")
+    commands_dir = "#{claude_home}/commands"
+    logs_dir = "#{claude_home}/logs/gummy"
+    comms_dir = "#{claude_home}/agent_comms/gummy"
+
+    # Create directories
+    system "mkdir", "-p", commands_dir
+    system "mkdir", "-p", logs_dir
+    system "mkdir", "-p", comms_dir
+
+    # Install slash commands to user's Claude config
+    Dir["#{prefix}/commands/*.md"].each do |cmd_file|
+      cmd_name = File.basename(cmd_file)
+      target = "#{commands_dir}/#{cmd_name}"
+
+      # Copy command file if it doesn't exist or update if different
+      if !File.exist?(target) || File.read(cmd_file) != File.read(target)
+        system "cp", cmd_file, target
+        puts "  Installed command: /#{File.basename(cmd_name, '.md')}"
+      end
+    end
   end
 
   def caveats
