@@ -13,6 +13,6 @@ class Todobi < Formula
   end
 
   test do
-    assert_match "todobi v1.2.0")
+    assert_match "todobi v1.2.0", shell_output("#{bin}/todobi --version")
   end
 end
