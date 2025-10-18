@@ -1,10 +1,10 @@
 class Todobi < Formula
   desc "Beautiful terminal task manager built with Bubble Tea"
   homepage "https://github.com/WillyV3/todobi"
-  url "https://github.com/WillyV3/todobi/archive/v1.3.3.tar.gz"
-  sha256 "80c9b7b96128922bf7c272f0c9223ce5408efecc4499f2776f072381f44a15e1"
+  url "https://github.com/WillyV3/todobi/archive/v1.3.4.tar.gz"
+  sha256 "ff973d87e6884d1832427d6775772b9f0205f4f1c74300727f67ca3178607024"
   license "MIT"
-  version "1.3.3"
+  version "1.3.4"
 
   depends_on "go" => :build
 
@@ -13,6 +13,6 @@ class Todobi < Formula
   end
 
   test do
-    assert_match "todobi v1.3.3", shell_output("#{bin}/todobi --version")
+    assert_match "todobi v1.3.4", shell_output("#{bin}/todobi --version")
   end
 end
