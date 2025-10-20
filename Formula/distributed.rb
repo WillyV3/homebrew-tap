@@ -8,22 +8,22 @@ class Distributed < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-o", bin/"d", "./cmd/d"
+    system "go", "build", "-o", bin/"dw", "./cmd/dw"
   end
 
   def caveats
     <<~EOS
       distributed has been installed!
 
-      The CLI is available as 'd' command.
+      The CLI is available as 'dw' command.
 
       Commands:
-        d status              - Check status of all hosts
-        d load                - Show load metrics for all hosts
-        d sync <host>         - Sync current directory to host
-        d run <host> <cmd>    - Run command on host
-        d tmux <host>         - Open tmux session on host
-        d config              - Show configuration
+        dw status              - Check status of all hosts
+        dw load                - Show load metrics for all hosts
+        dw sync <host>         - Sync current directory to host
+        dw run <host> <cmd>    - Run command on host
+        dw tmux <host>         - Open tmux session on host
+        dw config              - Show configuration
 
       Requirements:
         - Tailscale network configured
@@ -67,7 +67,7 @@ class Distributed < Formula
   end
 
   test do
-    assert_predicate bin/"d", :exist?
-    assert_predicate bin/"d", :executable?
+    assert_predicate bin/"dw", :exist?
+    assert_predicate bin/"dw", :executable?
   end
 end
