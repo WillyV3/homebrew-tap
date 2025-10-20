@@ -1,8 +1,8 @@
 class Distributed < Formula
   desc "Distribute workload across Tailscale-connected machines with intelligent load balancing"
   homepage "https://github.com/WillyV3/distributed"
-  url "https://github.com/WillyV3/distributed/archive/v0.0.3.tar.gz"
-  sha256 "dd10e5f5277097cb0e5cf469e01f893c3a71f94319b740a474d0cd01526c2047"
+  url "https://github.com/WillyV3/distributed/archive/v0.0.4.tar.gz"
+  sha256 "d0a1b72b8736738164c82a111cd70c6c0cdd174213fa9ac0de1adaf23d6845ca"
   license "MIT"
 
   depends_on "go" => :build
