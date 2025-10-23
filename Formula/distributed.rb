@@ -22,14 +22,12 @@ class Distributed < Formula
         dw load                - Show load metrics for all hosts
         dw sync <host>         - Sync current directory to host
         dw run <host> <cmd>    - Run command on host
-        dw tmux <host>         - Open tmux session on host
         dw config              - Show configuration
 
       Requirements:
         - Tailscale network configured
         - SSH access to remote hosts via ~/.ssh/config
         - rsync installed (for sync operations)
-        - tmux installed on remote hosts (for tmux command)
         - gum installed (optional, for enhanced UI)
 
       Configuration:
