@@ -6,7 +6,7 @@ class Vinw < Formula
   license "MIT"
 
   depends_on "go" => :build
-  depends_on "skate"
+  depends_on "charmbracelet/tap/skate"
 
   def install
     # Build main vinw binary
