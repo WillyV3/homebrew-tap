@@ -1,8 +1,8 @@
 class Vinw < Formula
   desc "Interactive file tree viewer with real-time git tracking and syntax highlighting"
   homepage "https://github.com/willyv3/vinw"
-  url "https://github.com/willyv3/vinw/archive/v0.9.1.tar.gz"
-  sha256 "b4a3e40c20bd9653e070c2446b55562306063587ea923be7c0271452e9fb97b2"
+  url "https://github.com/willyv3/vinw/archive/v0.10.0.tar.gz"
+  sha256 "9a83df13b9ee10358718ab8dc537659ca03cf5604dfe1149e62d83a6a7ee24f0"
   license "MIT"
 
   depends_on "go" => :build
@@ -42,11 +42,26 @@ class Vinw < Formula
           a           - Create new file
           A           - Create new directory
           d           - Delete file/directory
+          m           - Move file/folder
           c           - Copy path to clipboard
+          F           - Find/replace across files
           t/T         - Change theme
           v           - Show viewer command
           ?           - Help
           q           - Quit
+
+        Find/Replace Mode (F):
+          Tab         - Cycle through search/replace/include/exclude fields
+          Ctrl+r      - Toggle regex mode
+          Ctrl+s      - Toggle case sensitive
+          Enter       - Execute search
+          Results View:
+            j/k       - Navigate results
+            Space     - Toggle result for replacement
+            a         - Toggle all results
+            v         - Jump to result in viewer
+            Enter     - Perform replacement on selected
+            Esc       - Cancel
 
         vinw-viewer:
           e           - Edit file (auto-detects editor)
