@@ -1,8 +1,8 @@
 class Vinw < Formula
   desc "Interactive file tree viewer with real-time git tracking and syntax highlighting"
   homepage "https://github.com/willyv3/vinw"
-  url "https://github.com/willyv3/vinw/archive/v0.10.0.tar.gz"
-  sha256 "9a83df13b9ee10358718ab8dc537659ca03cf5604dfe1149e62d83a6a7ee24f0"
+  url "https://github.com/willyv3/vinw/archive/v0.10.1.tar.gz"
+  sha256 "195e973dda6c1b780aaa436337d0c32d37f5783e1bcba80d0e003ca80ce8c204"
   license "MIT"
 
   depends_on "go" => :build
@@ -59,8 +59,8 @@ class Vinw < Formula
             j/k       - Navigate results
             Space     - Toggle result for replacement
             a         - Toggle all results
-            v         - Jump to result in viewer
-            Enter     - Perform replacement on selected
+            v/Enter   - Jump to result in viewer
+            r         - Perform replacement on selected (with confirmation)
             Esc       - Cancel
 
         vinw-viewer:
