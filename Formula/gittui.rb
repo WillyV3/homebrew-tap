@@ -22,6 +22,9 @@ class Gittui < Formula
       View another user:
         gittui username
 
+      Configure settings:
+        gittui-config
+
       Press 't' to cycle through 364 themes!
     EOS
   end
@@ -29,6 +32,7 @@ class Gittui < Formula
   def install
     ENV["CGO_ENABLED"] = "0"
     system "go", "build", "-ldflags", "-s -w", "-o", bin/"gittui", "./cmd/gittui"
+    bin.install "scripts/configure.sh" => "gittui-config"
   end
 
   test do
