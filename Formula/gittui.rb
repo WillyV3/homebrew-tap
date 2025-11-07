@@ -27,7 +27,7 @@ class Gittui < Formula
   end
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "-o", bin/"gittui", "./cmd/gittui"
+    system "go", "build", "-ldflags", "-s -w", "-o", bin/"gittui", "./cmd/gittui"
   end
 
   test do
