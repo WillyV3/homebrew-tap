@@ -1,8 +1,8 @@
 class Gittui < Formula
   desc "GitHub profile viewer TUI - Terminal dashboard for GitHub activity"
   homepage "https://github.com/willyv3/gittui"
-  url "https://github.com/WillyV3/gittui/archive/v1.3.2.tar.gz"
-  sha256 "b691b757e87b1663e431adfb9ffd0073f940b78ca92783d952d3e0b32eb2b244"
+  url "https://github.com/WillyV3/gittui/archive/v1.3.3.tar.gz"
+  sha256 "9db12ca08f8190a83ebe37cb4c3edaadacb7b6cf4ace8f4edddc564a107da1ec"
   license "MIT"
 
   depends_on "go" => :build
