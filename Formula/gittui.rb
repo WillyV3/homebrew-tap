@@ -27,6 +27,7 @@ class Gittui < Formula
   end
 
   def install
+    ENV["CGO_ENABLED"] = "0"
     system "go", "build", "-ldflags", "-s -w", "-o", bin/"gittui", "./cmd/gittui"
   end
 
