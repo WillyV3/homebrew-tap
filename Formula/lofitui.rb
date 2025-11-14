@@ -5,7 +5,7 @@
 class Lofitui < Formula
   desc "Terminal UI for playing YouTube lofi streams with mpv"
   homepage "https://github.com/willyv3/lofitui-go"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   depends_on "mpv"
@@ -13,16 +13,16 @@ class Lofitui < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/WillyV3/lofitui/releases/download/v0.1.0/lofitui_0.1.0_darwin_amd64.tar.gz"
-      sha256 "7b3ca2dcb8e691420bb6b10ff86240281e33f0c2f5619f6d3548f45e16f81e1a"
+      url "https://github.com/WillyV3/lofitui/releases/download/v0.1.1/lofitui_0.1.1_darwin_amd64.tar.gz"
+      sha256 "75a4e39ee7f689243e23462ede3d7553db7f15846546a60ed8597eb8b6a2a5f9"
 
       def install
         bin.install "lofitui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/WillyV3/lofitui/releases/download/v0.1.0/lofitui_0.1.0_darwin_arm64.tar.gz"
-      sha256 "fc28a97388c27caae8ad2b2b577591e31f0a23272632c7b41fc92d702cf1dde2"
+      url "https://github.com/WillyV3/lofitui/releases/download/v0.1.1/lofitui_0.1.1_darwin_arm64.tar.gz"
+      sha256 "483ef7c4418659495cfa6fddd867b8fe9d831a667bf143dc95c8ea954400de50"
 
       def install
         bin.install "lofitui"
@@ -32,15 +32,15 @@ class Lofitui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/lofitui/releases/download/v0.1.0/lofitui_0.1.0_linux_amd64.tar.gz"
-      sha256 "b037a950e8df8ff66c6b20b6f4329744fc1d934101c6a1f83b5b512998bb839c"
+      url "https://github.com/WillyV3/lofitui/releases/download/v0.1.1/lofitui_0.1.1_linux_amd64.tar.gz"
+      sha256 "55ca854a4915fc50d6d033ee09108eec30d82203a06f40402184de2660bfd38f"
       def install
         bin.install "lofitui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/lofitui/releases/download/v0.1.0/lofitui_0.1.0_linux_arm64.tar.gz"
-      sha256 "1527f76fe59be749b84abd2b6bbe5ab9a4c704944bd1924963214bac43445ca5"
+      url "https://github.com/WillyV3/lofitui/releases/download/v0.1.1/lofitui_0.1.1_linux_arm64.tar.gz"
+      sha256 "62d1d67df968d6d43369798040a66ae6e2a8aa9b011528dc2c2222b21d277f20"
       def install
         bin.install "lofitui"
       end
