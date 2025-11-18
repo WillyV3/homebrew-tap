@@ -1,8 +1,8 @@
 class IconPicker < Formula
   desc "Terminal UI for browsing and selecting Nerd Font icons"
   homepage "https://github.com/WillyV3/icon-picker"
-  url "https://github.com/WillyV3/icon-picker/archive/v0.0.1.tar.gz"
-  sha256 "291d615bd5ca6cbcfa150452c0382fdacd8e2de74c78dc15d30a2226c283181a"
+  url "https://github.com/WillyV3/icon-picker/archive/v0.0.2.tar.gz"
+  sha256 "5394763ed1428d04edaf02c8231014c23de11c6307a00f85476c2cd2e6e88a06"
   license "MIT"
 
   depends_on "go" => :build
