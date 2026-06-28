@@ -5,13 +5,13 @@
 class ClaudePeersV2 < Formula
   desc "Channel-native peer messaging network for AI coding agents (broker + TUI)"
   homepage "https://github.com/WillyV3/claude-peers-v2"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/WillyV3/claude-peers-v2/releases/download/v0.1.1/claude-peers-v2_0.1.1_darwin_amd64.tar.gz"
-      sha256 "9e06e8dd8bb8cc7bae26f47d6c99e31c9d88a2a1b20ee0ee2bda1e282b68ee6f"
+      url "https://github.com/WillyV3/claude-peers-v2/releases/download/v0.1.2/claude-peers-v2_0.1.2_darwin_amd64.tar.gz"
+      sha256 "bb0adc6e3b18e790e4e3afb2d6e7fd05a9b906595454eabe8a25bbc759e25689"
 
       define_method(:install) do
         bin.install "cpv2"
@@ -19,8 +19,8 @@ class ClaudePeersV2 < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/WillyV3/claude-peers-v2/releases/download/v0.1.1/claude-peers-v2_0.1.1_darwin_arm64.tar.gz"
-      sha256 "2f9b581520241cf5feee090761926decfded3902ae6f5a796bacaaa477d59757"
+      url "https://github.com/WillyV3/claude-peers-v2/releases/download/v0.1.2/claude-peers-v2_0.1.2_darwin_arm64.tar.gz"
+      sha256 "5e5bbc3ea0a41fa71bbaba68d60cef83d0a02fae5b534b0c548f15ad07fac8b9"
 
       define_method(:install) do
         bin.install "cpv2"
@@ -31,16 +31,16 @@ class ClaudePeersV2 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/claude-peers-v2/releases/download/v0.1.1/claude-peers-v2_0.1.1_linux_amd64.tar.gz"
-      sha256 "d2fe8bacf02d9c103572a509da626c946253f6ca4c682e7940be114aaf959e81"
+      url "https://github.com/WillyV3/claude-peers-v2/releases/download/v0.1.2/claude-peers-v2_0.1.2_linux_amd64.tar.gz"
+      sha256 "0768384dd2f13c069c490ec78cd0f7c89c1905412d8770d42f6e4bbe4e1899a6"
       define_method(:install) do
         bin.install "cpv2"
         bin.install "cpv2-tui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/claude-peers-v2/releases/download/v0.1.1/claude-peers-v2_0.1.1_linux_arm64.tar.gz"
-      sha256 "a5f0bb6966c84f39d34355d268e324a4e022d0527e0f26e720c2463938f624a8"
+      url "https://github.com/WillyV3/claude-peers-v2/releases/download/v0.1.2/claude-peers-v2_0.1.2_linux_arm64.tar.gz"
+      sha256 "86b9ade7eb5afbd788d1c64f12fdf1cd038b63ebc3e582fcb02035c0b0164205"
       define_method(:install) do
         bin.install "cpv2"
         bin.install "cpv2-tui"
