@@ -5,21 +5,21 @@
 class Cp3 < Formula
   desc "Peer network for coding agents — one binary, embedded server, injects into live TUIs"
   homepage "https://github.com/WillyV3/cp3"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/WillyV3/cp3/releases/download/v0.1.0/cp3_0.1.0_darwin_amd64.tar.gz"
-      sha256 "5d8c102fa1200e6be3ddfd68eb977a0f18db07209f9ddc47b1c43aed21fca743"
+      url "https://github.com/WillyV3/cp3/releases/download/v0.2.0/cp3_0.2.0_darwin_amd64.tar.gz"
+      sha256 "b90ec5a1f668bf81620b078954cb5df4fc0b1f8387157212bc47bbd027b04b1d"
 
       define_method(:install) do
         bin.install "cp3"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/WillyV3/cp3/releases/download/v0.1.0/cp3_0.1.0_darwin_arm64.tar.gz"
-      sha256 "aba882b490f0f12c3132874c4cb8132669797e61713347114002b3c05fe2490c"
+      url "https://github.com/WillyV3/cp3/releases/download/v0.2.0/cp3_0.2.0_darwin_arm64.tar.gz"
+      sha256 "7906e0e575f0d0f7da34b9306cdd56d677de555dc15098bfc226bb218e3dd60c"
 
       define_method(:install) do
         bin.install "cp3"
@@ -29,19 +29,27 @@ class Cp3 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/cp3/releases/download/v0.1.0/cp3_0.1.0_linux_amd64.tar.gz"
-      sha256 "a23ddc1a7c1202602e32d1b4954275a757b54fb23cc5ef7507be523d8f2b0bae"
+      url "https://github.com/WillyV3/cp3/releases/download/v0.2.0/cp3_0.2.0_linux_amd64.tar.gz"
+      sha256 "ad82ca4aedcb8da62b7a8883cefc5a0e0f8b7464545702b296575ad340b6dace"
       define_method(:install) do
         bin.install "cp3"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/cp3/releases/download/v0.1.0/cp3_0.1.0_linux_arm64.tar.gz"
-      sha256 "fcfa21136635b862661068d285f0da600d2f4bc36b6cfe2da25a509af18a54aa"
+      url "https://github.com/WillyV3/cp3/releases/download/v0.2.0/cp3_0.2.0_linux_arm64.tar.gz"
+      sha256 "8a25d5d099cf11d02e51b19d8a66dae224dcd32f9687d87d60bb1ab63eaf6f38"
       define_method(:install) do
         bin.install "cp3"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      Get started:  cp3 setup   (wires Claude Code MCP + statusline)
+      Tip: `cp3 statusline` prints a live peers segment — append it to a
+      custom statusline if you have one. `cp3 doctor` diagnoses anything.
+    EOS
   end
 
   test do
