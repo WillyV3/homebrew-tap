@@ -5,21 +5,21 @@
 class Cp3 < Formula
   desc "Peer network for coding agents — one binary, embedded server, injects into live TUIs"
   homepage "https://github.com/WillyV3/cp3"
-  version "0.4.2"
+  version "0.4.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/WillyV3/cp3/releases/download/v0.4.2/cp3_0.4.2_darwin_amd64.tar.gz"
-      sha256 "8bcdc2db55aed754d116ce1cf12b609b0ef20e6e950265176a806766beba086a"
+      url "https://github.com/WillyV3/cp3/releases/download/v0.4.3/cp3_0.4.3_darwin_amd64.tar.gz"
+      sha256 "e4c8dce87de4127d02a1c422b60ee5fa7c9bd3a206effb2bd4937f3699f57bfb"
 
       define_method(:install) do
         bin.install "cp3"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/WillyV3/cp3/releases/download/v0.4.2/cp3_0.4.2_darwin_arm64.tar.gz"
-      sha256 "cbab43270c54da3b3db54f22798cf4112c724cff3984d1de941cec7caca83ef9"
+      url "https://github.com/WillyV3/cp3/releases/download/v0.4.3/cp3_0.4.3_darwin_arm64.tar.gz"
+      sha256 "b2cbacc417281f1025dd575e8aab156bd682ce879e5c77ea317e03c1ea19300c"
 
       define_method(:install) do
         bin.install "cp3"
@@ -29,15 +29,15 @@ class Cp3 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/cp3/releases/download/v0.4.2/cp3_0.4.2_linux_amd64.tar.gz"
-      sha256 "c71eb9e59ee1b661291f13df4f5caf644e2810995fbe48799230545417f2aa1f"
+      url "https://github.com/WillyV3/cp3/releases/download/v0.4.3/cp3_0.4.3_linux_amd64.tar.gz"
+      sha256 "cd77bd33526ad0884c27facf364c5adb9a137ffc213217d6277452498660fa38"
       define_method(:install) do
         bin.install "cp3"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/WillyV3/cp3/releases/download/v0.4.2/cp3_0.4.2_linux_arm64.tar.gz"
-      sha256 "1e681eef5288f04c40815079d938b749b37870b380d938ad443fd8fabfcb7f64"
+      url "https://github.com/WillyV3/cp3/releases/download/v0.4.3/cp3_0.4.3_linux_arm64.tar.gz"
+      sha256 "b2f98bfbdc82c05cb432853f470a1a8d35971b5cc382f89bd4ffcedd04829d43"
       define_method(:install) do
         bin.install "cp3"
       end
